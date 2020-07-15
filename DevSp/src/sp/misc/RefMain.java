@@ -7,7 +7,13 @@ import java.lang.reflect.Method;
 import programmers.lv1.Q12903;
 
 public class RefMain {
-
+/*
+	URL classUrl;
+	    classUrl = new URL("file:./path/"); // .class를 포함하고 있는 상위 경로
+	    URL[] classUrls = { classUrl };
+	    URLClassLoader ucl = new URLClassLoader(classUrls);
+	    Class<?> c = ucl.loadClass("aaa.bbb.MyClassA");
+*/
 	public void run() {
 		try {
 			Class clazz = Class.forName("programmers.lv1.Q12903");
