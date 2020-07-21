@@ -1,7 +1,6 @@
 package sp.misc;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import programmers.lv1.Q12903;
@@ -14,6 +13,7 @@ public class RefMain {
 	    URLClassLoader ucl = new URLClassLoader(classUrls);
 	    Class<?> c = ucl.loadClass("aaa.bbb.MyClassA");
 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void run() {
 		try {
 			Class clazz = Class.forName("programmers.lv1.Q12903");

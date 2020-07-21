@@ -1,4 +1,3 @@
 # DevSp
 https://github.com/parkty/javaasp
-
-blog.naver.com/kdh2147
+https://blog.naver.com/kdh2147

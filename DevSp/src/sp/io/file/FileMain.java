@@ -67,6 +67,7 @@ public class FileMain {
                 return file.isFile() && file.getName().startsWith("prefix_");
             }
         });
+        System.out.println(list);
     }
 
     public static void main(String[] args) throws Exception {
