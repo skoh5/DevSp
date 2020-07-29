@@ -28,6 +28,10 @@ public class TestServerChild implements Runnable {
 			int result = 0;
 			while(isRun) {
 				buf = in.readLine();
+				if(buf == null) {
+					Thread.sleep(2000L);
+					continue;
+				}
 				debug("read:"+buf);
 				arr = buf.split(",");
 				result = Integer.parseInt(arr[0])+Integer.parseInt(arr[1]);
@@ -51,5 +55,11 @@ public class TestServerChild implements Runnable {
 	
 	public synchronized void close() {
 		this.isRun = false;
+		try {
+			if(sock != null) {
+				sock.close();
+			}
+		} catch (IOException e) {
+		}
 	}
 }
