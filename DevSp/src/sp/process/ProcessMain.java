@@ -77,5 +77,6 @@ public class ProcessMain {
         m.byProcessBuilder();
         m.byProcessBuilderRedirectOutput();
         m.byProcessBuilderRedirect(command);
+        //https://d2.naver.com/helloworld/1113548
     }
 }
