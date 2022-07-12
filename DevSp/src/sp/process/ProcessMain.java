@@ -62,10 +62,20 @@ public class ProcessMain {
             e.printStackTrace();
         }
     }
+    
+    public void byProcessBuilderRedirect(String[] command)  
+        throws IOException, InterruptedException {
+        ProcessBuilder builder = new ProcessBuilder(command);
+        builder.redirectOutput(Redirect.INHERIT);
+        builder.redirectError(Redirect.INHERIT);
+        builder.start();
+    }
 
     public static void main(String[] args) {
+        String[] command = new String[] { "echo", "hello" };
         ProcessMain m = new ProcessMain();
         m.byProcessBuilder();
         m.byProcessBuilderRedirectOutput();
+        m.byProcessBuilderRedirect(command);
     }
 }
