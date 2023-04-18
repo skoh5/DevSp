@@ -13,6 +13,7 @@ public class MyServer {
 	
 	public void run() {
 		Server server = new Server(proxy.getPort());
+		//ServletContext https://creamilk88.tistory.com/87
 		ServletContextHandler context = new ServletContextHandler();
 		context.setContextPath("/");
 		context.setAttribute(ATTR_NAME_PROXY, proxy);
